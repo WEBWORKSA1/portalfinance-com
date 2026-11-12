@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loan calculator: auto &amp; personal loan payments | PortalFinance</title>
+<meta name="description" content="Calculate monthly payments, total interest and payoff date for auto, personal and student loans. Add extra payments and see a yearly amortization schedule.">
+<link rel="canonical" href="https://portalfinance.com/calculators/loan.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Loan calculator: auto &amp; personal loan payments | PortalFinance"><meta property="og:description" content="Calculate monthly payments, total interest and payoff date for auto, personal and student loans. Add extra payments and see a yearly amortization schedule."><meta property="og:url" content="https://portalfinance.com/calculators/loan.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Loan","item":"https://portalfinance.com/calculators/loan.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Loan calculator","url":"https://portalfinance.com/calculators/loan.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between interest rate and APR?","acceptedAnswer":{"@type":"Answer","text":"The interest rate is the cost of borrowing the principal. APR adds most required fees, such as origination fees, and expresses the total as a yearly rate, so APR is the better number for comparing offers."}},{"@type":"Question","name":"Does this work for student loans?","acceptedAnswer":{"@type":"Answer","text":"Yes for standard fixed repayment. Income-driven plans calculate payments from your income instead, so use your servicer's tools for those."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="loan">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Loan</nav>
+  <header class="page-head">
+    <h1>Loan calculator</h1>
+    <p class="lede">For car loans, personal loans and student loans: the monthly payment, the true total cost, and what paying a little extra does.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="amount">Loan amount</label><div class="with-unit pre"><span class="u">$</span><input id="amount" name="amount" type="number" min="0" step="100" value="30000"></div></div>
+        <div class="field"><label for="rate">Interest rate (APR)</label><div class="with-unit"><input id="rate" name="rate" type="number" min="0" max="60" step="0.01" value="8.5"><span class="u">%</span></div><input type="range" min="0" max="36" step="0.25" data-sync="rate" aria-label="Interest rate slider"></div>
+        <div class="inline-2">
+          <div class="field"><label for="term">Term</label><input id="term" name="term" type="number" min="1" step="1" value="60"></div>
+          <div class="field"><label for="termUnit">Unit</label><select id="termUnit" name="termUnit"><option value="months" selected>Months</option><option value="years">Years</option></select></div>
+        </div>
+        <div class="field"><label for="extra">Extra payment / month</label><div class="with-unit pre"><span class="u">$</span><input id="extra" name="extra" type="number" min="0" step="10" value="0"></div></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">Monthly payment</div><div class="v" id="rPay">—</div></div>
+        <div class="figure"><div class="k">Total interest</div><div class="v" id="rInterest">—</div></div>
+        <div class="figure"><div class="k">Total cost</div><div class="v" id="rTotal">—</div></div>
+        <div class="figure"><div class="k">Paid off in</div><div class="v" id="rPayoff">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Principal vs. interest</h3><div id="rBreak"></div></div>
+      <div class="chart-box"><h3>Balance over time</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Paying more than you should?</strong> A free plan compares refinancing and consolidation options for your situation.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Pay%20off%20debt" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+      <div><h3 style="font-size:1.2rem">Amortization by year</h3><div id="schedule"></div></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>How loan payments are calculated</h2>
+    <p>Installment loans use the same amortization formula as mortgages: a fixed payment where the interest share shrinks as the balance falls. The interest each month is simply the balance times the monthly rate (APR ÷ 12). Whatever is left of your payment reduces principal.</p>
+    <p>The term is the biggest lever after the rate. Stretching a $30,000 car loan at 8.5% from 60 to 84 months drops the payment by roughly $140 but adds nearly $3,000 in interest, and leaves you owing more than the car is worth for longer.</p>
+    <h3>Three ways to pay less</h3>
+    <ul>
+      <li><strong>Shorten the term</strong> to the shortest payment you can comfortably afford.</li>
+      <li><strong>Raise your credit score</strong> before applying. Moving up one credit tier can cut several points off a personal-loan APR. See <a href="../guides/how-credit-scores-work.html">how credit scores work</a>.</li>
+      <li><strong>Pay extra toward principal.</strong> Confirm your lender has no prepayment penalty and applies extra amounts to principal.</li>
+    </ul>
+    <div class="faq">
+      <h2>Loan FAQ</h2>
+      <details><summary>What is the difference between interest rate and APR?</summary>
+        <p>The interest rate is the cost of borrowing the principal. APR adds most required fees, such as origination fees, and expresses the total as a yearly rate, so APR is the better number for comparing offers.</p></details>
+      <details><summary>Does this work for student loans?</summary>
+        <p>Yes for standard fixed repayment. Income-driven plans calculate payments from your income instead, so use your servicer's tools for those.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>

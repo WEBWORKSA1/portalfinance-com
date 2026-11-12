@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compound interest calculator with monthly contributions | PortalFinance</title>
+<meta name="description" content="See how your savings and investments grow with compound interest. Add monthly contributions, yearly increases and compounding frequency, with a year-by-year growth chart.">
+<link rel="canonical" href="https://portalfinance.com/calculators/compound-interest.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Compound interest calculator with monthly contributions | PortalFinance"><meta property="og:description" content="See how your savings and investments grow with compound interest. Add monthly contributions, yearly increases and compounding frequency, with a year-by-year growth chart."><meta property="og:url" content="https://portalfinance.com/calculators/compound-interest.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Compound interest","item":"https://portalfinance.com/calculators/compound-interest.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Compound interest calculator","url":"https://portalfinance.com/calculators/compound-interest.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does daily compounding make a big difference?","acceptedAnswer":{"@type":"Answer","text":"Less than people expect. At 5%, daily compounding yields about 5.13% a year versus 5.12% for monthly. The rate and the time invested matter far more."}},{"@type":"Question","name":"Should I subtract inflation?","acceptedAnswer":{"@type":"Answer","text":"To see results in today's dollars, enter a real return (your expected return minus expected inflation, for example 7% minus 3% = 4%)."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="compound">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Compound interest</nav>
+  <header class="page-head">
+    <h1>Compound interest calculator</h1>
+    <p class="lede">Watch interest start earning its own interest. Set a starting amount, a monthly contribution and a rate of return, then see how much of the result is growth rather than your own money.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="initial">Starting amount</label><div class="with-unit pre"><span class="u">$</span><input id="initial" name="initial" type="number" min="0" step="100" value="5000"></div></div>
+        <div class="field"><label for="monthly">Monthly contribution</label><div class="with-unit pre"><span class="u">$</span><input id="monthly" name="monthly" type="number" min="0" step="25" value="500"></div><input type="range" min="0" max="5000" step="25" data-sync="monthly" aria-label="Monthly contribution slider"></div>
+        <div class="inline-2">
+          <div class="field"><label for="rate">Annual return</label><div class="with-unit"><input id="rate" name="rate" type="number" min="-20" max="50" step="0.1" value="7"><span class="u">%</span></div></div>
+          <div class="field"><label for="years">Years</label><input id="years" name="years" type="number" min="1" max="80" step="1" value="25"></div>
+        </div>
+        <div class="inline-2">
+          <div class="field"><label for="freq">Compounding</label><select id="freq" name="freq"><option value="365">Daily</option><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="1">Yearly</option></select></div>
+          <div class="field"><label for="raise">Raise contribution / yr</label><div class="with-unit"><input id="raise" name="raise" type="number" min="0" max="50" step="0.5" value="0"><span class="u">%</span></div></div>
+        </div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">Future balance</div><div class="v" id="rFinal">—</div></div>
+        <div class="figure"><div class="k">You contribute</div><div class="v" id="rContrib">—</div></div>
+        <div class="figure"><div class="k">Interest earned</div><div class="v" id="rGrowth">—</div></div>
+        <div class="figure"><div class="k">Money multiplier</div><div class="v" id="rMult">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Contributions and interest, stacked</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Not sure what return to expect, or where to invest?</strong> Get a free investing game plan built around your timeline.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Invest%20and%20grow%20wealth" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+      <div><h3 style="font-size:1.2rem">Year by year</h3><div id="schedule"></div></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>The formula behind compounding</h2>
+    <p>For a single deposit, the future value is <em>FV = P(1 + r/n)<sup>nt</sup></em>: principal <em>P</em>, annual rate <em>r</em>, compounding periods per year <em>n</em>, and years <em>t</em>. Regular contributions add a growing stack of smaller deposits, each compounding for a shorter time. This calculator works month by month so it can handle contributions that rise each year.</p>
+    <p>The key insight is that time does more of the work than the rate. At 7%, money roughly doubles every 10 years (the <strong>rule of 72</strong>: 72 ÷ 7 ≈ 10.3). Someone who invests $500 a month from age 25 to 35 and then stops can end up with more at 65 than someone who invests $500 a month from 35 to 65, because the early money has three extra doublings.</p>
+    <h3>Picking a realistic return</h3>
+    <ul>
+      <li><strong>High-yield savings or CDs:</strong> use the quoted APY; it is roughly guaranteed up to deposit-insurance limits.</li>
+      <li><strong>A diversified stock index fund:</strong> long-run US returns have averaged around 10% a year before inflation, about 6–7% after. Planners often use 5–7% to stay conservative.</li>
+      <li><strong>Bonds:</strong> roughly the current yield of the fund, which changes with interest rates.</li>
+    </ul>
+    <p>Returns are never smooth. A real portfolio will have down years. The line here shows the average path, not a promise. Learn more in <a href="../guides/compound-interest-explained.html">Compound interest explained</a>.</p>
+    <div class="faq">
+      <h2>Compound interest FAQ</h2>
+      <details><summary>Does daily compounding make a big difference?</summary>
+        <p>Less than people expect. At 5%, daily compounding yields about 5.13% a year versus 5.12% for monthly. The rate and the time invested matter far more.</p></details>
+      <details><summary>Should I subtract inflation?</summary>
+        <p>To see results in today's dollars, enter a real return (your expected return minus expected inflation, for example 7% minus 3% = 4%).</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>

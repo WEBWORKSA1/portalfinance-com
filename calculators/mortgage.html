@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mortgage calculator with taxes, insurance &amp; PMI | PortalFinance</title>
+<meta name="description" content="Estimate your full monthly mortgage payment including property tax, homeowners insurance, PMI and HOA. See total interest, payoff date, amortization and extra-payment savings.">
+<link rel="canonical" href="https://portalfinance.com/calculators/mortgage.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Mortgage calculator with taxes, insurance &amp; PMI | PortalFinance"><meta property="og:description" content="Estimate your full monthly mortgage payment including property tax, homeowners insurance, PMI and HOA. See total interest, payoff date, amortization and extra-payment savings."><meta property="og:url" content="https://portalfinance.com/calculators/mortgage.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Mortgage","item":"https://portalfinance.com/calculators/mortgage.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Mortgage calculator","url":"https://portalfinance.com/calculators/mortgage.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What interest rate should I enter?","acceptedAnswer":{"@type":"Answer","text":"Use the rate from a written Loan Estimate if you have one. Otherwise use a current average for your loan type and credit tier, then test a rate one point higher to see how sensitive the payment is."}},{"@type":"Question","name":"When does PMI go away?","acceptedAnswer":{"@type":"Answer","text":"On most conventional US loans you can ask to cancel PMI once the balance reaches 80% of the home's original value, and it ends automatically at 78%. FHA mortgage insurance follows different rules."}},{"@type":"Question","name":"Is a 15-year mortgage better than a 30-year?","acceptedAnswer":{"@type":"Answer","text":"A 15-year loan usually has a lower rate and far less total interest, but a much higher payment. A 30-year loan with voluntary extra payments keeps flexibility if your income drops. Run both here and compare total interest."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="mortgage">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Mortgage</nav>
+  <header class="page-head">
+    <h1>Mortgage calculator</h1>
+    <p class="lede">See the whole monthly payment, not just principal and interest: property tax, insurance, PMI and HOA dues included, plus how much an extra payment saves.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="price">Home price</label><div class="with-unit pre"><span class="u">$</span><input id="price" name="price" type="number" min="0" step="1000" value="450000"></div></div>
+        <div class="field"><label for="downPct">Down payment</label><div class="with-unit"><input id="downPct" name="downPct" type="number" min="0" max="100" step="0.5" value="20"><span class="u">%</span></div><input type="range" min="0" max="50" step="0.5" data-sync="downPct" aria-label="Down payment percent slider"></div>
+        <div class="inline-2">
+          <div class="field"><label for="rate">Interest rate</label><div class="with-unit"><input id="rate" name="rate" type="number" min="0" max="30" step="0.01" value="6.5"><span class="u">%</span></div></div>
+          <div class="field"><label for="years">Term</label><select id="years" name="years"><option value="30" selected>30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
+        </div>
+        <div class="inline-2">
+          <div class="field"><label for="tax">Property tax / yr</label><div class="with-unit"><input id="tax" name="tax" type="number" min="0" step="0.01" value="1.1"><span class="u">%</span></div></div>
+          <div class="field"><label for="insurance">Insurance / yr</label><div class="with-unit pre"><span class="u">$</span><input id="insurance" name="insurance" type="number" min="0" step="50" value="1800"></div></div>
+        </div>
+        <div class="inline-2">
+          <div class="field"><label for="pmi">PMI rate / yr</label><div class="with-unit"><input id="pmi" name="pmi" type="number" min="0" step="0.05" value="0.6"><span class="u">%</span></div><span class="hint">Applies under 20% down</span></div>
+          <div class="field"><label for="hoa">HOA / month</label><div class="with-unit pre"><span class="u">$</span><input id="hoa" name="hoa" type="number" min="0" step="10" value="0"></div></div>
+        </div>
+        <div class="field"><label for="extra">Extra payment / month</label><div class="with-unit pre"><span class="u">$</span><input id="extra" name="extra" type="number" min="0" step="25" value="0"></div></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">Estimated monthly payment</div><div class="v" id="rTotal">—</div></div>
+        <div class="figure"><div class="k">Principal &amp; interest</div><div class="v" id="rPI">—</div></div>
+        <div class="figure"><div class="k">Loan amount</div><div class="v" id="rLoan">—</div></div>
+        <div class="figure"><div class="k">Total interest</div><div class="v" id="rInterest">—</div></div>
+        <div class="figure"><div class="k">Payoff date</div><div class="v" id="rPayoff">—</div></div>
+        <div class="figure" style="grid-column:1/-1"><div class="k">Extra-payment savings</div><div class="v" id="rSaved" style="font-size:1.3rem">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Where each payment goes</h3><div id="rBreak"></div></div>
+      <div class="chart-box"><h3>Balance and interest over the loan</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Want a lender-ready second opinion?</strong> Get a free plan that checks affordability, down payment and rate options.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Buy%20a%20home%20%2F%20mortgage" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+      <div><h3 style="font-size:1.2rem">Amortization by year</h3><div id="schedule"></div></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>How this mortgage calculator works</h2>
+    <p>Your monthly payment has up to five parts. <strong>Principal and interest</strong> are fixed for a fixed-rate loan and use the standard amortization formula: <em>M = P × r(1+r)<sup>n</sup> / ((1+r)<sup>n</sup> − 1)</em>, where <em>P</em> is the loan amount, <em>r</em> the monthly rate (annual rate ÷ 12) and <em>n</em> the number of monthly payments.</p>
+    <p>On top of that sit <strong>property tax</strong> (entered as a yearly percentage of the home's price), <strong>homeowners insurance</strong>, <strong>private mortgage insurance (PMI)</strong> when you put down less than 20%, and any <strong>HOA dues</strong>. Many lenders collect tax and insurance through an escrow account, so this full figure is closer to what leaves your bank account each month.</p>
+    <h3>Why extra payments matter so much</h3>
+    <p>Early in a 30-year loan, most of each payment is interest. On a $360,000 loan at 6.5%, the first payment sends about $1,950 to interest and only about $325 to principal. Every extra dollar you pay goes straight to principal, which shrinks the balance that future interest is charged on. Try adding $200 a month above: the saving is usually tens of thousands of dollars and several years.</p>
+    <h3>Rules of thumb lenders use</h3>
+    <ul>
+      <li><strong>28% front-end ratio:</strong> housing costs no more than about 28% of gross monthly income.</li>
+      <li><strong>36–43% back-end ratio:</strong> all debt payments, including the mortgage, under roughly 36% (conventional) to 43% (many qualified mortgages).</li>
+      <li><strong>20% down</strong> avoids PMI on conventional loans; PMI usually costs 0.3%–1.5% of the loan per year.</li>
+    </ul>
+    <p>Being approved for a payment doesn't mean it fits your life. Our guide <a href="../guides/how-much-house-can-you-afford.html">How much house can you afford?</a> walks through a stricter test that leaves room for saving and repairs.</p>
+    <div class="faq">
+      <h2>Mortgage FAQ</h2>
+      <details><summary>What interest rate should I enter?</summary>
+        <p>Use the rate from a written Loan Estimate if you have one. Otherwise use a current average for your loan type and credit tier, then test a rate one point higher to see how sensitive the payment is.</p></details>
+      <details><summary>When does PMI go away?</summary>
+        <p>On most conventional US loans you can ask to cancel PMI once the balance reaches 80% of the home's original value, and it ends automatically at 78%. FHA mortgage insurance follows different rules.</p></details>
+      <details><summary>Is a 15-year mortgage better than a 30-year?</summary>
+        <p>A 15-year loan usually has a lower rate and far less total interest, but a much higher payment. A 30-year loan with voluntary extra payments keeps flexibility if your income drops. Run both here and compare total interest.</p></details>
+    </div>
+    <p class="small muted">Estimates only. Your lender's Loan Estimate is the authoritative figure. Read our <a href="../disclaimer.html">disclaimer</a>.</p>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>
