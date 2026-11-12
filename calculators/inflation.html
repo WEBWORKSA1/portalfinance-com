@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inflation calculator: future cost &amp; purchasing power | PortalFinance</title>
+<meta name="description" content="See what today&#x27;s money will cost and be worth in the future at any inflation rate. Shows purchasing power lost and how many years until prices double.">
+<link rel="canonical" href="https://portalfinance.com/calculators/inflation.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Inflation calculator: future cost &amp; purchasing power | PortalFinance"><meta property="og:description" content="See what today&#x27;s money will cost and be worth in the future at any inflation rate. Shows purchasing power lost and how many years until prices double."><meta property="og:url" content="https://portalfinance.com/calculators/inflation.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Inflation","item":"https://portalfinance.com/calculators/inflation.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Inflation calculator","url":"https://portalfinance.com/calculators/inflation.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What inflation rate should I use?","acceptedAnswer":{"@type":"Answer","text":"For long-term planning, 2.5–3% is a common middle estimate. For a stress test, try 4%."}},{"@type":"Question","name":"What is the rule of 72?","acceptedAnswer":{"@type":"Answer","text":"Divide 72 by the annual rate to estimate how many years it takes to double. At 3% inflation, prices double in about 24 years. This calculator shows the exact figure."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="inflation">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Inflation</nav>
+  <header class="page-head">
+    <h1>Inflation calculator</h1>
+    <p class="lede">Inflation is a quiet tax on cash. Enter an amount and a rate to see what the same purchase will cost later, and what today's dollars will be able to buy.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="amount">Amount today</label><div class="with-unit pre"><span class="u">$</span><input id="amount" name="amount" type="number" min="0" step="100" value="10000"></div></div>
+        <div class="field"><label for="rate">Average inflation rate</label><div class="with-unit"><input id="rate" name="rate" type="number" min="-5" max="50" step="0.1" value="3"><span class="u">%</span></div><input type="range" min="0" max="10" step="0.1" data-sync="rate" aria-label="Inflation rate slider"></div>
+        <div class="field"><label for="years">Years from now</label><input id="years" name="years" type="number" min="1" max="100" step="1" value="20"></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">The same purchase will cost</div><div class="v" id="rFuture">—</div></div>
+        <div class="figure"><div class="k">Today's amount will buy what costs today</div><div class="v" id="rPower">—</div></div>
+        <div class="figure"><div class="k">Purchasing power lost</div><div class="v" id="rLoss">—</div></div>
+        <div class="figure"><div class="k">Prices double in</div><div class="v" id="rRule">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Cost of living vs. value of cash</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Is your cash losing ground?</strong> A free plan shows where to keep money so it keeps pace.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Invest%20and%20grow%20wealth" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>How inflation compounds</h2>
+    <p>Inflation compounds the same way interest does, only against you. Future cost is <em>amount × (1 + inflation)<sup>years</sup></em>; purchasing power is <em>amount ÷ (1 + inflation)<sup>years</sup></em>. At 3% a year, prices roughly double in 23 years, so $10,000 in a drawer buys about $5,500 worth of today's goods after 20 years.</p>
+    <p>Central banks such as the US Federal Reserve, the Bank of Canada and the Bank of England target about 2% inflation over time. Actual inflation swings well above and below target. Use a higher rate for long plans, or for costs that tend to rise faster than average, such as tuition and health care.</p>
+    <h3>Protecting your money</h3>
+    <ul>
+      <li>Keep only your emergency fund and near-term goals in cash, and in accounts paying a competitive rate.</li>
+      <li>For long horizons, own assets that have historically outpaced inflation, such as diversified stocks.</li>
+      <li>Inflation-linked bonds (TIPS in the US, real return bonds elsewhere) adjust principal with inflation.</li>
+    </ul>
+    <p>More in <a href="../guides/inflation-and-your-money.html">Inflation and your money</a>.</p>
+    <div class="faq">
+      <h2>Inflation FAQ</h2>
+      <details><summary>What inflation rate should I use?</summary>
+        <p>For long-term planning, 2.5–3% is a common middle estimate. For a stress test, try 4%.</p></details>
+      <details><summary>What is the rule of 72?</summary>
+        <p>Divide 72 by the annual rate to estimate how many years it takes to double. At 3% inflation, prices double in about 24 years. This calculator shows the exact figure.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>

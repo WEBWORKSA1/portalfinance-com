@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FIRE calculator: your financial independence number | PortalFinance</title>
+<meta name="description" content="Calculate your FIRE number from yearly spending and a safe withdrawal rate, the years and age you could reach financial independence, and your Coast FIRE number.">
+<link rel="canonical" href="https://portalfinance.com/calculators/fire.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="FIRE calculator: your financial independence number | PortalFinance"><meta property="og:description" content="Calculate your FIRE number from yearly spending and a safe withdrawal rate, the years and age you could reach financial independence, and your Coast FIRE number."><meta property="og:url" content="https://portalfinance.com/calculators/fire.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"FIRE","item":"https://portalfinance.com/calculators/fire.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"FIRE calculator","url":"https://portalfinance.com/calculators/fire.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between Lean, Fat and Coast FIRE?","acceptedAnswer":{"@type":"Answer","text":"Lean FIRE targets a minimal budget, Fat FIRE a generous one. Coast FIRE means you've saved enough that growth alone reaches your target by a normal retirement age, so you only need to earn your current expenses."}},{"@type":"Question","name":"Is a 4% withdrawal rate safe?","acceptedAnswer":{"@type":"Answer","text":"It held up for 30-year retirements across most of US history, but nothing is guaranteed. Flexible spending in bad years improves the odds considerably."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="fire">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / FIRE number</nav>
+  <header class="page-head">
+    <h1>FIRE calculator</h1>
+    <p class="lede">Financial independence means your investments can cover your spending. Find your number, the year you could hit it, and the point where you could stop saving and let growth finish the job.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="expenses">Yearly spending in retirement</label><div class="with-unit pre"><span class="u">$</span><input id="expenses" name="expenses" type="number" min="0" step="1000" value="50000"></div></div>
+        <div class="inline-2">
+          <div class="field"><label for="withdraw">Withdrawal rate</label><div class="with-unit"><input id="withdraw" name="withdraw" type="number" min="2" max="8" step="0.1" value="4"><span class="u">%</span></div></div>
+          <div class="field"><label for="age">Your age</label><input id="age" name="age" type="number" min="16" max="80" value="32"></div>
+        </div>
+        <div class="field"><label for="portfolio">Invested today</label><div class="with-unit pre"><span class="u">$</span><input id="portfolio" name="portfolio" type="number" min="0" step="1000" value="90000"></div></div>
+        <div class="field"><label for="saving">Invested each year</label><div class="with-unit pre"><span class="u">$</span><input id="saving" name="saving" type="number" min="0" step="1000" value="30000"></div><input type="range" min="0" max="150000" step="1000" data-sync="saving" aria-label="Yearly investing slider"></div>
+        <div class="field"><label for="return">Real return (after inflation)</label><div class="with-unit"><input id="return" name="return" type="number" min="-5" max="15" step="0.1" value="5"><span class="u">%</span></div></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">Your FIRE number</div><div class="v" id="rTarget">—</div></div>
+        <div class="figure"><div class="k">Time to reach it</div><div class="v" id="rYears">—</div></div>
+        <div class="figure"><div class="k">Financially independent at</div><div class="v" id="rAge">—</div></div>
+        <div class="figure" style="grid-column:1/-1"><div class="k">Coast FIRE number (enough today to reach your target by 65 with no more saving)</div><div class="v" id="rCoast" style="font-size:1.4rem">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Portfolio vs. FIRE number</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Planning an early exit?</strong> Get a free plan covering account order, health coverage and withdrawal strategy.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Retirement%20planning" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>The math of financial independence</h2>
+    <p>Your FIRE number is yearly spending divided by your withdrawal rate. At a 4% rate, that's 25 times spending: $50,000 a year needs $1.25 million. The 4% figure comes from research on historical US market returns (often called the Trinity study), which found a 4% initial withdrawal, raised with inflation, lasted 30 years in most historical periods.</p>
+    <p>Early retirees need money to last 40–60 years, so many use 3.25–3.5% instead. Each half-point lower raises the target meaningfully, so test both. Because this calculator uses a <em>real</em> return, all figures are in today's dollars.</p>
+    <h3>Savings rate beats everything</h3>
+    <p>The share of income you invest determines how fast you get there more than investment returns do. Saving 10% of take-home pay implies roughly 40+ years of work; saving 50% shortens that to about 17 years at a 5% real return, because you're both building the portfolio faster and needing a smaller one.</p>
+    <p>Read the trade-offs in <a href="../guides/the-4-percent-rule-and-fire.html">The 4% rule and FIRE, explained</a>.</p>
+    <div class="faq">
+      <h2>FIRE FAQ</h2>
+      <details><summary>What's the difference between Lean, Fat and Coast FIRE?</summary>
+        <p>Lean FIRE targets a minimal budget, Fat FIRE a generous one. Coast FIRE means you've saved enough that growth alone reaches your target by a normal retirement age, so you only need to earn your current expenses.</p></details>
+      <details><summary>Is a 4% withdrawal rate safe?</summary>
+        <p>It held up for 30-year retirements across most of US history, but nothing is guaranteed. Flexible spending in bad years improves the odds considerably.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>
