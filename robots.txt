@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://portalfinance.com/sitemap.xml
