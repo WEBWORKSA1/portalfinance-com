@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>50/30/20 budget calculator | PortalFinance</title>
+<meta name="description" content="Split your take-home pay into needs, wants and savings with the 50/30/20 rule, then compare against what you actually spend and get specific fixes.">
+<link rel="canonical" href="https://portalfinance.com/calculators/budget.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="50/30/20 budget calculator | PortalFinance"><meta property="og:description" content="Split your take-home pay into needs, wants and savings with the 50/30/20 rule, then compare against what you actually spend and get specific fixes."><meta property="og:url" content="https://portalfinance.com/calculators/budget.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Budget","item":"https://portalfinance.com/calculators/budget.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"50/30/20 budget calculator","url":"https://portalfinance.com/calculators/budget.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is 50/30/20 based on gross or net income?","acceptedAnswer":{"@type":"Answer","text":"Net. Use take-home pay after taxes and payroll deductions. If your employer deducts retirement contributions, you can count them toward the 20%."}},{"@type":"Question","name":"Where does my emergency fund go?","acceptedAnswer":{"@type":"Answer","text":"In the 20% savings bucket. Build it to at least one month of needs first, then aim for three to six months. See our emergency fund guide."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="budget">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / 50/30/20 budget</nav>
+  <header class="page-head">
+    <h1>50/30/20 budget calculator</h1>
+    <p class="lede">A simple starting split for take-home pay: half for needs, 30% for wants, 20% for savings and extra debt payments. Add your real numbers to see where you're off.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="income">Monthly take-home pay</label><div class="with-unit pre"><span class="u">$</span><input id="income" name="income" type="number" min="0" step="50" value="4800"></div><span class="hint">After tax and payroll deductions</span></div>
+        <p class="legend" style="margin:.5rem 0 0">Optional: what you spend now</p>
+        <div class="field"><label for="needs">Needs (rent, groceries, utilities, insurance, minimum debt payments)</label><div class="with-unit pre"><span class="u">$</span><input id="needs" name="needs" type="number" min="0" step="25" value="2700"></div></div>
+        <div class="field"><label for="wants">Wants (dining, shopping, travel, subscriptions)</label><div class="with-unit pre"><span class="u">$</span><input id="wants" name="wants" type="number" min="0" step="25" value="1500"></div></div>
+        <div class="field"><label for="save">Savings &amp; extra debt payments</label><div class="with-unit pre"><span class="u">$</span><input id="save" name="save" type="number" min="0" step="25" value="600"></div></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure"><div class="k">Needs (50%)</div><div class="v" id="rNeeds">—</div></div>
+        <div class="figure"><div class="k">Wants (30%)</div><div class="v" id="rWants">—</div></div>
+        <div class="figure"><div class="k">Savings &amp; debt (20%)</div><div class="v" id="rSave">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Target split</h3><div id="rTarget"></div></div>
+      <div class="chart-box"><h3>Your current split</h3><div id="rActual"><p class="muted small">Enter your spending to compare.</p></div></div>
+      <div class="panel"><h3 style="font-size:1.15rem">What to fix first</h3><ul id="rAdvice"><li class="muted">Enter your spending to get specific suggestions.</li></ul></div>
+      <div class="cta-inline"><p><strong>Want a budget built around your goals?</strong> Get a free game plan with a month-by-month savings target.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Not%20sure%20yet" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>What counts as a need, a want and a saving</h2>
+    <p><strong>Needs</strong> are the bills you'd still pay if you lost your job tomorrow: housing, utilities, basic groceries, transport to work, insurance, child care and the <em>minimum</em> payments on debts. <strong>Wants</strong> are everything that improves life but could pause: restaurants, streaming, upgrades, travel. <strong>Savings</strong> include your emergency fund, retirement contributions beyond any payroll deduction, and any payment above a debt's minimum.</p>
+    <p>The 50/30/20 split was popularised as a simple rule of thumb, not a law. In high-cost cities, needs often run 60% or more; in that case shrink wants first and protect at least 10–15% for savings. If you carry high-interest debt, push the third bucket well past 20% until it's gone.</p>
+    <h3>Make it automatic</h3>
+    <ol>
+      <li>Have your savings transfer leave on payday, before you can spend it.</li>
+      <li>Put fixed bills on autopay from one account.</li>
+      <li>Spend wants from a separate account or card, so the balance tells you what's left.</li>
+    </ol>
+    <p>The full system, including zero-based budgeting, is in <a href="../guides/how-to-build-a-budget.html">How to build a budget that survives real life</a>.</p>
+    <div class="faq">
+      <h2>Budget FAQ</h2>
+      <details><summary>Is 50/30/20 based on gross or net income?</summary>
+        <p>Net. Use take-home pay after taxes and payroll deductions. If your employer deducts retirement contributions, you can count them toward the 20%.</p></details>
+      <details><summary>Where does my emergency fund go?</summary>
+        <p>In the 20% savings bucket. Build it to at least one month of needs first, then aim for three to six months. See our <a href="../guides/emergency-fund.html">emergency fund guide</a>.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>

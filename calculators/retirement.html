@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retirement calculator: am I saving enough? | PortalFinance</title>
+<meta name="description" content="Project your retirement savings, the nest egg you will need, any shortfall, and the extra monthly saving that closes the gap. Includes inflation and drawdown to life expectancy.">
+<link rel="canonical" href="https://portalfinance.com/calculators/retirement.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Retirement calculator: am I saving enough? | PortalFinance"><meta property="og:description" content="Project your retirement savings, the nest egg you will need, any shortfall, and the extra monthly saving that closes the gap. Includes inflation and drawdown to life expectancy."><meta property="og:url" content="https://portalfinance.com/calculators/retirement.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Retirement","item":"https://portalfinance.com/calculators/retirement.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Retirement calculator","url":"https://portalfinance.com/calculators/retirement.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What return should I assume?","acceptedAnswer":{"@type":"Answer","text":"Many planners use 5–7% before retirement for a stock-heavy portfolio and 4–5% after, as portfolios usually become more conservative. Test a pessimistic case too."}},{"@type":"Question","name":"Does this include taxes?","acceptedAnswer":{"@type":"Answer","text":"No. Enter the income you want before tax, or raise the target to cover tax on traditional 401(k), IRA or RRSP withdrawals."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="retirement">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Retirement</nav>
+  <header class="page-head">
+    <h1>Retirement calculator</h1>
+    <p class="lede">Find out whether your current saving rate gets you to the retirement income you want, and how much more per month closes any gap.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="inline-2">
+          <div class="field"><label for="age">Current age</label><input id="age" name="age" type="number" min="16" max="90" value="35"></div>
+          <div class="field"><label for="retireAge">Retire at</label><input id="retireAge" name="retireAge" type="number" min="30" max="90" value="65"></div>
+        </div>
+        <div class="inline-2">
+          <div class="field"><label for="lifeAge">Plan to age</label><input id="lifeAge" name="lifeAge" type="number" min="60" max="110" value="92"></div>
+          <div class="field"><label for="savings">Saved so far</label><div class="with-unit pre"><span class="u">$</span><input id="savings" name="savings" type="number" min="0" step="1000" value="60000"></div></div>
+        </div>
+        <div class="field"><label for="monthly">Monthly saving</label><div class="with-unit pre"><span class="u">$</span><input id="monthly" name="monthly" type="number" min="0" step="50" value="800"></div><input type="range" min="0" max="6000" step="50" data-sync="monthly" aria-label="Monthly saving slider"></div>
+        <div class="field"><label for="income">Yearly income wanted in retirement (today's dollars)</label><div class="with-unit pre"><span class="u">$</span><input id="income" name="income" type="number" min="0" step="1000" value="60000"></div></div>
+        <div class="field"><label for="other">Other yearly income (pension, Social Security, CPP)</label><div class="with-unit pre"><span class="u">$</span><input id="other" name="other" type="number" min="0" step="1000" value="20000"></div></div>
+        <div class="inline-2">
+          <div class="field"><label for="returnPre">Return before</label><div class="with-unit"><input id="returnPre" name="returnPre" type="number" step="0.1" value="7"><span class="u">%</span></div></div>
+          <div class="field"><label for="returnPost">Return after</label><div class="with-unit"><input id="returnPost" name="returnPost" type="number" step="0.1" value="5"><span class="u">%</span></div></div>
+        </div>
+        <div class="field"><label for="inflation">Inflation</label><div class="with-unit"><input id="inflation" name="inflation" type="number" step="0.1" value="2.5"><span class="u">%</span></div></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">Projected savings at retirement</div><div class="v" id="rProj">—</div></div>
+        <div class="figure"><div class="k">Needed at retirement</div><div class="v" id="rReq">—</div></div>
+        <div class="figure"><div class="k">Gap</div><div class="v" id="rGap">—</div></div>
+        <div class="figure"><div class="k">To close the gap</div><div class="v" id="rExtra" style="font-size:1.35rem">—</div></div>
+        <div class="figure" style="grid-column:1/-1"><div class="k">Longevity check</div><div class="v" id="rLast" style="font-size:1.25rem">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Savings by age, saving then spending</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Behind, or not sure?</strong> A free retirement game plan covers accounts, tax order and how to catch up.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Retirement%20planning" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>How the projection works</h2>
+    <p>The calculator runs in two phases. While you work, your savings grow monthly at the pre-retirement return and you add your monthly saving. After you retire, each year you withdraw the income you asked for, minus any pension or government benefit, grown for inflation, while the rest earns the post-retirement return.</p>
+    <p>The <strong>needed at retirement</strong> figure is the lump sum that would fund that inflation-adjusted income until your planning age, given the post-retirement return. If your projected savings fall short, the calculator shows the extra monthly saving that closes the gap by your retirement date.</p>
+    <h3>Levers that move the result most</h3>
+    <ul>
+      <li><strong>Retirement age.</strong> Working two more years adds two years of saving and growth and removes two years of withdrawals.</li>
+      <li><strong>Saving rate.</strong> Capturing a full employer match is the highest guaranteed return most people will ever get.</li>
+      <li><strong>Spending in retirement.</strong> Many retirees spend 70–80% of their pre-retirement income; your number may differ.</li>
+      <li><strong>Fees.</strong> A 1% annual fee can leave a portfolio about a quarter smaller after 30 years. Low-cost index funds help; see <a href="../guides/index-funds-and-etfs.html">our ETF guide</a>.</li>
+    </ul>
+    <p>Not sure where you stand for your age? Read <a href="../guides/retirement-planning-by-age.html">Retirement planning by age</a>.</p>
+    <div class="faq">
+      <h2>Retirement FAQ</h2>
+      <details><summary>What return should I assume?</summary>
+        <p>Many planners use 5–7% before retirement for a stock-heavy portfolio and 4–5% after, as portfolios usually become more conservative. Test a pessimistic case too.</p></details>
+      <details><summary>Does this include taxes?</summary>
+        <p>No. Enter the income you want before tax, or raise the target to cover tax on traditional 401(k), IRA or RRSP withdrawals.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>

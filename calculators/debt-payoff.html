@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debt payoff calculator: snowball vs. avalanche | PortalFinance</title>
+<meta name="description" content="Enter all your debts and an extra monthly amount to compare the debt snowball and avalanche methods: debt-free date, total interest, and payoff order.">
+<link rel="canonical" href="https://portalfinance.com/calculators/debt-payoff.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Debt payoff calculator: snowball vs. avalanche | PortalFinance"><meta property="og:description" content="Enter all your debts and an extra monthly amount to compare the debt snowball and avalanche methods: debt-free date, total interest, and payoff order."><meta property="og:url" content="https://portalfinance.com/calculators/debt-payoff.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Debt payoff","item":"https://portalfinance.com/calculators/debt-payoff.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Debt payoff calculator","url":"https://portalfinance.com/calculators/debt-payoff.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I include my mortgage?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Mortgages carry low rates and long terms; most plans focus on consumer debt first. Add it if you want a complete debt-free date."}},{"@type":"Question","name":"What if a minimum payment doesn't cover the interest?","acceptedAnswer":{"@type":"Answer","text":"Then that balance grows each month and the calculator may show \"never\" for minimums only. Prioritise that debt or call the lender about a hardship plan."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="debt">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Debt payoff</nav>
+  <header class="page-head">
+    <h1>Debt payoff calculator</h1>
+    <p class="lede">List every debt, add what you can pay on top of the minimums, and compare the two proven payoff methods side by side.</p>
+  </header>
+  <form id="calcForm" class="form panel" aria-label="Your debts">
+    <div id="debtList" class="form">
+      <div class="debt-row"><div class="field"><label>Name</label><input type="text" data-f="name" value="Credit card"></div><div class="field"><label>Balance ($)</label><input type="number" min="0" step="1" data-f="bal" value="6500"></div><div class="field"><label>APR %</label><input type="number" min="0" step=".01" data-f="apr" value="24.99"></div><div class="field"><label>Min. payment ($)</label><input type="number" min="0" step="1" data-f="min" value="195"></div><button class="icon-btn" type="button" aria-label="Remove this debt" data-remove>&times;</button></div>
+      <div class="debt-row"><div class="field"><label>Name</label><input type="text" data-f="name" value="Car loan"></div><div class="field"><label>Balance ($)</label><input type="number" min="0" step="1" data-f="bal" value="14000"></div><div class="field"><label>APR %</label><input type="number" min="0" step=".01" data-f="apr" value="7.9"></div><div class="field"><label>Min. payment ($)</label><input type="number" min="0" step="1" data-f="min" value="340"></div><button class="icon-btn" type="button" aria-label="Remove this debt" data-remove>&times;</button></div>
+      <div class="debt-row"><div class="field"><label>Name</label><input type="text" data-f="name" value="Store card"></div><div class="field"><label>Balance ($)</label><input type="number" min="0" step="1" data-f="bal" value="1200"></div><div class="field"><label>APR %</label><input type="number" min="0" step=".01" data-f="apr" value="29.99"></div><div class="field"><label>Min. payment ($)</label><input type="number" min="0" step="1" data-f="min" value="40"></div><button class="icon-btn" type="button" aria-label="Remove this debt" data-remove>&times;</button></div>
+    </div>
+    <div class="btn-row" style="justify-content:space-between;align-items:end">
+      <button class="btn btn-ghost btn-sm" type="button" id="addDebt">Add another debt</button>
+      <div class="field" style="min-width:240px"><label for="extra">Extra per month, on top of minimums</label><div class="with-unit pre"><span class="u">$</span><input id="extra" name="extra" type="number" min="0" step="10" value="250"></div></div>
+    </div>
+  </form>
+  <section class="results" aria-live="polite" aria-label="Results" style="margin-top:1.5rem">
+    <div class="figures">
+      <div class="figure"><div class="k">Snowball (smallest balance first)</div><div class="v" id="rSnow">—</div></div>
+      <div class="figure"><div class="k">Avalanche (highest rate first)</div><div class="v" id="rAva">—</div></div>
+      <div class="figure"><div class="k">Minimums only</div><div class="v" id="rMin">—</div></div>
+      <div class="figure hero-fig"><div class="k">Best plan for you</div><div class="v" id="rBest" style="font-size:1.6rem">—</div></div>
+    </div>
+    <div class="chart-box"><h3>Total balance, month by month</h3><div id="chart"></div></div>
+    <div class="grid g2">
+      <div class="panel"><h3 style="font-size:1.15rem">Snowball payoff order</h3><ol id="rOrderSnow"></ol></div>
+      <div class="panel"><h3 style="font-size:1.15rem">Avalanche payoff order</h3><ol id="rOrderAva"></ol></div>
+    </div>
+    <div class="cta-inline"><p><strong>Rates above 20%?</strong> A free debt game plan checks balance transfers, consolidation loans and hardship programs.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Pay%20off%20debt" data-plan-link>Get my free plan</a></div>
+    <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+  </section>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>Snowball or avalanche?</h2>
+    <p>Both methods pay the minimum on every debt and throw every spare dollar at one target. When that target is paid off, its payment rolls into the next target, so your payoff power grows like a snowball either way. The only difference is the order.</p>
+    <ul>
+      <li><strong>Avalanche</strong> targets the highest interest rate first. It is mathematically optimal: it always costs the least interest and is never slower.</li>
+      <li><strong>Snowball</strong> targets the smallest balance first. You clear whole accounts sooner, and research on consumer debt repayment suggests those early wins help people stick with the plan.</li>
+    </ul>
+    <p>If the two results above are close, pick the snowball for momentum. If the avalanche saves real money, usually when a large balance carries the highest rate, take the avalanche. The full reasoning is in <a href="../guides/debt-snowball-vs-avalanche.html">our snowball vs. avalanche guide</a>.</p>
+    <div class="faq">
+      <h2>Debt payoff FAQ</h2>
+      <details><summary>Should I include my mortgage?</summary>
+        <p>Usually not. Mortgages carry low rates and long terms; most plans focus on consumer debt first. Add it if you want a complete debt-free date.</p></details>
+      <details><summary>What if a minimum payment doesn't cover the interest?</summary>
+        <p>Then that balance grows each month and the calculator may show "never" for minimums only. Prioritise that debt or call the lender about a hardship plan.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>

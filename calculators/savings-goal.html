@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Savings goal calculator: how much to save each month | PortalFinance</title>
+<meta name="description" content="Find the monthly saving needed to reach a goal by a target date, or how long your current saving takes. Works for down payments, emergency funds, travel and tuition.">
+<link rel="canonical" href="https://portalfinance.com/calculators/savings-goal.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="PortalFinance"><meta property="og:title" content="Savings goal calculator: how much to save each month | PortalFinance"><meta property="og:description" content="Find the monthly saving needed to reach a goal by a target date, or how long your current saving takes. Works for down payments, emergency funds, travel and tuition."><meta property="og:url" content="https://portalfinance.com/calculators/savings-goal.html"><meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#12352E">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>try{var t=localStorage.getItem("pf-theme");document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://portalfinance.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://portalfinance.com/calculators/"},{"@type":"ListItem","position":3,"name":"Savings goal","item":"https://portalfinance.com/calculators/savings-goal.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Savings goal calculator","url":"https://portalfinance.com/calculators/savings-goal.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I save or pay off debt first?","acceptedAnswer":{"@type":"Answer","text":"Build a starter emergency fund of about one month of expenses, then attack debt above roughly 7–8% interest, then return to bigger goals. Use the debt payoff calculator to compare."}},{"@type":"Question","name":"Are savings account rates guaranteed?","acceptedAnswer":{"@type":"Answer","text":"Variable savings rates can change at any time. CDs and Treasury bills lock a rate for their term."}}]}</script>
+</head>
+<body data-page="calculators" data-calc="savings">
+<a class="skip" href="#main">Skip to content</a>
+<div class="interest-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership</a></div>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html">PortalFinance</a><nav class="nav" aria-label="Main"><a href="../calculators/">Calculators</a><a href="../markets.html">Markets</a><a href="../guides/">Guides</a><a href="../free-plan.html">Free plan</a></nav></div></header>
+<main id="main">
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="./">Calculators</a> / Savings goal</nav>
+  <header class="page-head">
+    <h1>Savings goal calculator</h1>
+    <p class="lede">Two answers at once: what you need to save each month to hit a goal on time, and when you'll get there at the amount you save now.</p>
+  </header>
+  <div class="calc">
+    <section class="calc-inputs panel" aria-label="Inputs">
+      <form id="calcForm" class="form">
+        <div class="field"><label for="goal">Goal amount</label><div class="with-unit pre"><span class="u">$</span><input id="goal" name="goal" type="number" min="0" step="500" value="60000"></div></div>
+        <div class="field"><label for="current">Saved so far</label><div class="with-unit pre"><span class="u">$</span><input id="current" name="current" type="number" min="0" step="100" value="8000"></div></div>
+        <div class="inline-2">
+          <div class="field"><label for="years">Reach it in (years)</label><input id="years" name="years" type="number" min="0.5" max="60" step="0.5" value="4"></div>
+          <div class="field"><label for="rate">Interest / return</label><div class="with-unit"><input id="rate" name="rate" type="number" min="0" max="20" step="0.1" value="4"><span class="u">%</span></div></div>
+        </div>
+        <div class="field"><label for="monthly">What you save now each month</label><div class="with-unit pre"><span class="u">$</span><input id="monthly" name="monthly" type="number" min="0" step="25" value="800"></div><input type="range" min="0" max="5000" step="25" data-sync="monthly" aria-label="Monthly saving slider"></div>
+      </form>
+    </section>
+    <section class="results" aria-live="polite" aria-label="Results">
+      <div class="figures">
+        <div class="figure hero-fig"><div class="k">Save this much each month to hit your date</div><div class="v" id="rNeeded">—</div></div>
+        <div class="figure" style="grid-column:1/-1"><div class="k">At your current saving, you'll get there in</div><div class="v" id="rTime">—</div></div>
+      </div>
+      <div class="chart-box"><h3>Path to your goal at the required saving</h3><div id="chart"></div></div>
+      <div class="cta-inline"><p><strong>Saving for a home?</strong> Get a free plan covering down payment, closing costs and first-time buyer programs.</p><a class="btn btn-gold btn-sm" href="../free-plan.html?goal=Buy%20a%20home%20%2F%20mortgage" data-plan-link>Get my free plan</a></div>
+      <div class="tool-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareResult">Share this result</button><button class="btn btn-ghost btn-sm" type="button" data-print>Print</button></div>
+    </section>
+  </div>
+  <div data-ad="calculator"></div>
+  <article class="prose" style="margin-top:3.5rem">
+    <h2>Where to keep money for a goal</h2>
+    <p>Match the account to the deadline. Money you'll need within about three years shouldn't ride the stock market, because a 20–30% drop right before you need it can wreck the plan. For short goals, use a high-yield savings account, money market fund, CDs or Treasury bills. For goals five or more years away, a balanced mix of stocks and bonds is reasonable.</p>
+    <p>The required monthly figure assumes interest compounds monthly at the rate you enter, and that you deposit at the end of each month. Raising the rate from 1% to 4% on a four-year goal typically trims the monthly requirement by a few percent; extending the deadline does far more.</p>
+    <h3>Common goals and typical targets</h3>
+    <ul>
+      <li><strong>Emergency fund:</strong> three to six months of essential expenses.</li>
+      <li><strong>Home down payment:</strong> 3–20% of the price plus 2–5% for closing costs.</li>
+      <li><strong>Car:</strong> enough to pay cash, or at least 20% down to avoid owing more than it's worth.</li>
+    </ul>
+    <div class="faq">
+      <h2>Savings goal FAQ</h2>
+      <details><summary>Should I save or pay off debt first?</summary>
+        <p>Build a starter emergency fund of about one month of expenses, then attack debt above roughly 7–8% interest, then return to bigger goals. Use the <a href="debt-payoff.html">debt payoff calculator</a> to compare.</p></details>
+      <details><summary>Are savings account rates guaranteed?</summary>
+        <p>Variable savings rates can change at any time. CDs and Treasury bills lock a rate for their term.</p></details>
+    </div>
+  </article>
+</div>
+</main>
+<footer class="site-footer"></footer>
+<script src="../assets/js/config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/calc.js"></script>
+</body>
+</html>
